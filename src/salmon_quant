@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+set -e
+
+bin/salmon/salmon quant \
+    -l IU \
+    -i output/ref/salmon_index \
+    -1 output/trimmed/SRR3748957_1.fastq \
+    -2 output/trimmed/SRR3748957_2.fastq \
+    --output output/salmon/SRR3748957 \
+    -p 25 \
+    &> output/logs/SRR3748957_salmon.log
+
+bin/salmon/salmon quant \
+    -l IU \
+    -i output/ref/salmon_index \
+    -1 output/trimmed/SRR3748958_1.fastq \
+    -2 output/trimmed/SRR3748958_2.fastq \
+    --output output/salmon/SRR3748958 \
+    -p 25 \
+    &> output/logs/SRR3748958_salmon.log
+
+bin/salmon/salmon quant \
+    -l IU \
+    -i output/ref/salmon_index \
+    -1 output/trimmed/SRR3748959_1.fastq \
+    -2 output/trimmed/SRR3748959_2.fastq \
+    --output output/salmon/SRR3748959 \
+    -p 25 \
+    &> output/logs/SRR3748959_salmon.log
+
+bin/salmon/salmon quant \
+    -l IU \
+    -i output/ref/salmon_index \
+    -1 output/trimmed/SRR3748960_1.fastq \
+    -2 output/trimmed/SRR3748960_2.fastq \
+    --output output/salmon/SRR3748960 \
+    -p 25 \
+    &> output/logs/SRR3748960_salmon.log
+
+bin/salmon/salmon quant \
+    -l IU \
+    -i output/ref/salmon_index \
+    -1 output/trimmed/SRR3748961_1.fastq \
+    -2 output/trimmed/SRR3748961_2.fastq \
+    --output output/salmon/SRR3748961 \
+    -p 25 \
+    &> output/logs/SRR3748961_salmon.log
+
+bin/salmon/salmon quant \
+    -l IU \
+    -i output/ref/salmon_index \
+    -1 output/trimmed/SRR3748963_1.fastq \
+    -2 output/trimmed/SRR3748963_2.fastq \
+    --output output/salmon/SRR3748963 \
+    -p 25 \
+    &> output/logs/SRR3748963_salmon.log

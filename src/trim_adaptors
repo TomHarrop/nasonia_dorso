@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+
+set -e
+
+repair.sh \
+    in=data/reads/SRR3748957_1.fastq \
+    in2=data/reads/SRR3748957_2.fastq \
+    out=stdout.fastq \
+    2> output/trimmed/SRR3748957-repair.log \
+    | bbduk.sh \
+    threads=10 \
+    in=stdin.fastq \
+    out=output/trimmed/SRR3748957_1.fastq \
+    out2=output/trimmed/SRR3748957_2.fastq \
+    ref=data/adapters.fa \
+    ktrim=r k=23 mink=11 hdist=1 tpe tbo \
+    forcetrimmod=5 \
+    2> output/trimmed/SRR3748957-trim.log &
+
+repair.sh \
+    in=data/reads/SRR3748958_1.fastq \
+    in2=data/reads/SRR3748958_2.fastq \
+    out=stdout.fastq \
+    2> output/trimmed/SRR3748958-repair.log \
+    | bbduk.sh \
+    threads=10 \
+    in=stdin.fastq \
+    out=output/trimmed/SRR3748958_1.fastq \
+    out2=output/trimmed/SRR3748958_2.fastq \
+    ref=data/adapters.fa \
+    ktrim=r k=23 mink=11 hdist=1 tpe tbo \
+    forcetrimmod=5 \
+    2> output/trimmed/SRR3748958-trim.log &
+
+repair.sh \
+    in=data/reads/SRR3748959_1.fastq \
+    in2=data/reads/SRR3748959_2.fastq \
+    out=stdout.fastq \
+    2> output/trimmed/SRR3748959-repair.log \
+    | bbduk.sh \
+    threads=10 \
+    in=stdin.fastq \
+    out=output/trimmed/SRR3748959_1.fastq \
+    out2=output/trimmed/SRR3748959_2.fastq \
+    ref=data/adapters.fa \
+    ktrim=r k=23 mink=11 hdist=1 tpe tbo \
+    forcetrimmod=5 \
+    2> output/trimmed/SRR3748959-trim.log &
+
+repair.sh \
+    in=data/reads/SRR3748960_1.fastq \
+    in2=data/reads/SRR3748960_2.fastq \
+    out=stdout.fastq \
+    2> output/trimmed/SRR3748960-repair.log \
+    | bbduk.sh \
+    threads=10 \
+    in=stdin.fastq \
+    out=output/trimmed/SRR3748960_1.fastq \
+    out2=output/trimmed/SRR3748960_2.fastq \
+    ref=data/adapters.fa \
+    ktrim=r k=23 mink=11 hdist=1 tpe tbo \
+    forcetrimmod=5 \
+    2> output/trimmed/SRR3748960-trim.log &
+
+repair.sh \
+    in=data/reads/SRR3748961_1.fastq \
+    in2=data/reads/SRR3748961_2.fastq \
+    out=stdout.fastq \
+    2> output/trimmed/SRR3748961-repair.log \
+    | bbduk.sh \
+    threads=10 \
+    in=stdin.fastq \
+    out=output/trimmed/SRR3748961_1.fastq \
+    out2=output/trimmed/SRR3748961_2.fastq \
+    ref=data/adapters.fa \
+    ktrim=r k=23 mink=11 hdist=1 tpe tbo \
+    forcetrimmod=5 \
+    2> output/trimmed/SRR3748961-trim.log &
+
+repair.sh \
+    in=data/reads/SRR3748963_1.fastq \
+    in2=data/reads/SRR3748963_2.fastq \
+    out=stdout.fastq \
+    2> output/trimmed/SRR3748963-repair.log \
+    | bbduk.sh \
+    threads=10 \
+    in=stdin.fastq \
+    out=output/trimmed/SRR3748963_1.fastq \
+    out2=output/trimmed/SRR3748963_2.fastq \
+    ref=data/adapters.fa \
+    ktrim=r k=23 mink=11 hdist=1 tpe tbo \
+    forcetrimmod=5 \
+    2> output/trimmed/SRR3748963-trim.log &
+
+wait
+
+exit 0

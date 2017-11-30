@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+bin/salmon/salmon index \
+    --transcripts data/ref/nvit2_evigenes_pub11u.good.tr \
+    --index output/ref/salmon_index \
+    --threads 25 \
+    &> output/logs/salmon_index.log
